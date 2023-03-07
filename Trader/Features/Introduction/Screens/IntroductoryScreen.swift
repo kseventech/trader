@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IntroductoryScreen: View {
     @State private var selectedTab: Int = 0
-    
+
     var body: some View {
         VStack {
             TabView(selection: $selectedTab) {
@@ -17,22 +17,21 @@ struct IntroductoryScreen: View {
                     .padding([.bottom], 80)
                     .padding([.top], 20)
                     .tag(0)
-                
+
                 AssetScreen()
                     .padding([.bottom], 80)
                     .tag(1)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
-            
+
             Button("Continue", action: continueButtonPressed)
                 .buttonStyle(StandardButton())
-            
+
             Spacer()
         }
-        
     }
-    
+
     private func continueButtonPressed() {
         withAnimation {
             selectedTab = (selectedTab + 1) % 2
