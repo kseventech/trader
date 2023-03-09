@@ -18,7 +18,7 @@ struct IntroductoryScreen: View {
                     .padding([.top], 20)
                     .tag(0)
 
-                AssetScreen()
+                PickAssetScreen()
                     .padding([.bottom], 80)
                     .tag(1)
             }

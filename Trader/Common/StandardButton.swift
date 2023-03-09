@@ -11,11 +11,12 @@ struct StandardButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
-            .foregroundColor(.white)
+            .foregroundColor(Style.Colors.purple)
+            .font(.headline)
             .padding()
             .frame(height: 44)
-            .background(Style.Colors.purple)
-            .cornerRadius(8)
+            .background(.clear)
+            .border(Style.Colors.purple, width: 2)
     }
 }
 
