@@ -11,7 +11,11 @@ import SwiftUI
 struct TraderApp: App {
     var body: some Scene {
         WindowGroup {
-            IntroductoryScreen()
+            if UserDefaults.standard.bool(forKey: "isOnboarded") {
+                TradingScreen()
+            } else {
+                IntroductoryScreen()
+            }
         }
     }
 }

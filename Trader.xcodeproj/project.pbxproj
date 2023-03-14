@@ -23,6 +23,7 @@
 		D25E18D529B8A989008BCE84 /* CoinsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E18D429B8A989008BCE84 /* CoinsService.swift */; };
 		D25E18D929B8AA26008BCE84 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E18D829B8AA26008BCE84 /* APIConstants.swift */; };
 		D25E18DC29B8B0B0008BCE84 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E18DB29B8B0AF008BCE84 /* CoinView.swift */; };
+		D29A5AF829C0CCFE00B45946 /* TradingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */; };
 		D2D271DB29B8EB4A00BC786A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D2D271DA29B8EB4A00BC786A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		D25E18D429B8A989008BCE84 /* CoinsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsService.swift; sourceTree = "<group>"; };
 		D25E18D829B8AA26008BCE84 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D25E18DB29B8B0AF008BCE84 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D25E18BE29B77560008BCE84 /* Introduction */,
+				D29A5AF529C0CCE500B45946 /* Trading */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -228,6 +231,22 @@
 				D25E18DB29B8B0AF008BCE84 /* CoinView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D29A5AF529C0CCE500B45946 /* Trading */ = {
+			isa = PBXGroup;
+			children = (
+				D29A5AF629C0CCF200B45946 /* Screens */,
+			);
+			path = Trading;
+			sourceTree = "<group>";
+		};
+		D29A5AF629C0CCF200B45946 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +410,7 @@
 				D25E18DC29B8B0B0008BCE84 /* CoinView.swift in Sources */,
 				D25E18C829B7874B008BCE84 /* StandardButton.swift in Sources */,
 				D25E18D529B8A989008BCE84 /* CoinsService.swift in Sources */,
+				D29A5AF829C0CCFE00B45946 /* TradingScreen.swift in Sources */,
 				D25E18CF29B8A4C4008BCE84 /* Coin.swift in Sources */,
 				D25E18CB29B789A1008BCE84 /* Style.swift in Sources */,
 				D25E18D129B8A916008BCE84 /* PickAssetViewModel.swift in Sources */,

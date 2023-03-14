@@ -12,7 +12,13 @@ struct IntroductoryScreen: View {
     @StateObject var pickAssetVm = PickAssetViewModelImpl(service: CoinsServiceImpl())
     @State private var selectedTab: Int = 0
 
+    @AppStorage("isOnboarded") private var isOnboarded: Bool = false
+
     var body: some View {
+        if isOnboarded {
+            TradingScreen()
+                .transition(.push(from: .trailing))
+        } else {
             VStack {
                 TabView(selection: $selectedTab) {
                     WelcomeScreen()
@@ -34,6 +40,7 @@ struct IntroductoryScreen: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+        }
     }
 
     private var isContinueDisabled: Bool {
@@ -42,7 +49,11 @@ struct IntroductoryScreen: View {
 
     private func continueButtonPressed() {
         withAnimation {
-            selectedTab = (selectedTab + 1) % 2
+            if selectedTab == 0 {
+                selectedTab = (selectedTab + 1) % 2
+            } else if selectedTab == 1 {
+                self.isOnboarded = true
+            }
         }
     }
 }
