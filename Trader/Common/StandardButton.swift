@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct StandardButton: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled: Bool
+
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
-            .foregroundColor(Style.Colors.purple)
+            .foregroundColor(Style.Colors.purple.opacity(isEnabled ? 1 : 0.35))
             .font(.headline)
             .padding()
             .frame(height: 44)
             .background(.clear)
-            .border(Style.Colors.purple, width: 2)
+            .border(Style.Colors.purple.opacity(isEnabled ? 1 : 0.35), width: 2)
     }
 }
 

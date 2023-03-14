@@ -8,28 +8,36 @@
 import SwiftUI
 
 struct IntroductoryScreen: View {
+
+    @StateObject var pickAssetVm = PickAssetViewModelImpl(service: CoinsServiceImpl())
     @State private var selectedTab: Int = 0
 
     var body: some View {
-        VStack {
-            TabView(selection: $selectedTab) {
-                WelcomeScreen()
-                    .padding([.bottom], 80)
-                    .padding([.top], 20)
-                    .tag(0)
+            VStack {
+                TabView(selection: $selectedTab) {
+                    WelcomeScreen()
+                        .padding([.bottom], 80)
+                        .padding([.top], 20)
+                        .tag(0)
 
-                PickAssetScreen()
-                    .padding([.bottom], 80)
-                    .tag(1)
+                    PickAssetScreen(vm: pickAssetVm)
+                        .padding([.bottom], 80)
+                        .tag(1)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .always))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
+
+                Button("Continue", action: continueButtonPressed)
+                    .buttonStyle(StandardButton())
+                    .disabled(isContinueDisabled)
+                Spacer()
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+    }
 
-            Button("Continue", action: continueButtonPressed)
-                .buttonStyle(StandardButton())
-
-            Spacer()
-        }
+    private var isContinueDisabled: Bool {
+        selectedTab == 1 ? pickAssetVm.selectedCoin == nil : false
     }
 
     private func continueButtonPressed() {

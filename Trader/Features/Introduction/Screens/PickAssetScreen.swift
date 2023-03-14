@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PickAssetScreen: View {
-    @StateObject var vm = PickAssetViewModelImpl(service: CoinsServiceImpl())
+    @ObservedObject var vm: PickAssetViewModelImpl
 
     let columns = [
         GridItem(.adaptive(minimum: 100))
