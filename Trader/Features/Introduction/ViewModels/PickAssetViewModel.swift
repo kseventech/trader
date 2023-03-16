@@ -18,7 +18,7 @@ protocol PickAssetViewModel: ObservableObject {
 
     private let service: CoinsService
 
-    init(service: CoinsService) {
+    init(service: CoinsService = CoinsServiceImpl()) {
         self.service = service
     }
 

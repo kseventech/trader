@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IntroductoryScreen: View {
 
-    @StateObject var pickAssetVm = PickAssetViewModelImpl(service: CoinsServiceImpl())
+    @StateObject var pickAssetVm = PickAssetViewModelImpl()
     @State private var selectedTab: Int = 0
 
     @AppStorage("isOnboarded") private var isOnboarded: Bool = false
