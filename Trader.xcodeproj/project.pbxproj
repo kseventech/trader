@@ -24,6 +24,9 @@
 		D25E18D929B8AA26008BCE84 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E18D829B8AA26008BCE84 /* APIConstants.swift */; };
 		D25E18DC29B8B0B0008BCE84 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E18DB29B8B0AF008BCE84 /* CoinView.swift */; };
 		D29A5AF829C0CCFE00B45946 /* TradingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */; };
+		D29A5AFE29C0DCD300B45946 /* TradingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A5AFD29C0DCD300B45946 /* TradingDirection.swift */; };
+		D29A5B0229C0DCE800B45946 /* TradingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A5B0129C0DCE800B45946 /* TradingOption.swift */; };
+		D29A5B0B29C34CFD00B45946 /* TradingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A5B0A29C34CFD00B45946 /* TradingViewModel.swift */; };
 		D2D271DB29B8EB4A00BC786A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D2D271DA29B8EB4A00BC786A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		D25E18D829B8AA26008BCE84 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D25E18DB29B8B0AF008BCE84 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingScreen.swift; sourceTree = "<group>"; };
+		D29A5AFD29C0DCD300B45946 /* TradingDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDirection.swift; sourceTree = "<group>"; };
+		D29A5B0129C0DCE800B45946 /* TradingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingOption.swift; sourceTree = "<group>"; };
+		D29A5B0A29C34CFD00B45946 /* TradingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +171,10 @@
 		D25E18BE29B77560008BCE84 /* Introduction */ = {
 			isa = PBXGroup;
 			children = (
-				D25E18DA29B8B0A4008BCE84 /* Views */,
-				D25E18D329B8A97B008BCE84 /* Services */,
-				D25E18D229B8A91B008BCE84 /* ViewModels */,
 				D25E18CD29B8A4AA008BCE84 /* Models */,
+				D25E18D229B8A91B008BCE84 /* ViewModels */,
+				D25E18D329B8A97B008BCE84 /* Services */,
+				D25E18DA29B8B0A4008BCE84 /* Views */,
 				D25E18BF29B7756F008BCE84 /* Screens */,
 			);
 			path = Introduction;
@@ -236,6 +242,8 @@
 		D29A5AF529C0CCE500B45946 /* Trading */ = {
 			isa = PBXGroup;
 			children = (
+				D29A5AFC29C0DCC300B45946 /* Enums */,
+				D29A5B0729C0E04700B45946 /* ViewModels */,
 				D29A5AF629C0CCF200B45946 /* Screens */,
 			);
 			path = Trading;
@@ -247,6 +255,23 @@
 				D29A5AF729C0CCFE00B45946 /* TradingScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		D29A5AFC29C0DCC300B45946 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D29A5AFD29C0DCD300B45946 /* TradingDirection.swift */,
+				D29A5B0129C0DCE800B45946 /* TradingOption.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D29A5B0729C0E04700B45946 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D29A5B0A29C34CFD00B45946 /* TradingViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,8 +435,10 @@
 				D25E18DC29B8B0B0008BCE84 /* CoinView.swift in Sources */,
 				D25E18C829B7874B008BCE84 /* StandardButton.swift in Sources */,
 				D25E18D529B8A989008BCE84 /* CoinsService.swift in Sources */,
+				D29A5B0B29C34CFD00B45946 /* TradingViewModel.swift in Sources */,
 				D29A5AF829C0CCFE00B45946 /* TradingScreen.swift in Sources */,
 				D25E18CF29B8A4C4008BCE84 /* Coin.swift in Sources */,
+				D29A5AFE29C0DCD300B45946 /* TradingDirection.swift in Sources */,
 				D25E18CB29B789A1008BCE84 /* Style.swift in Sources */,
 				D25E18D129B8A916008BCE84 /* PickAssetViewModel.swift in Sources */,
 				D25E18C229B77596008BCE84 /* WelcomeScreen.swift in Sources */,
@@ -419,6 +446,7 @@
 				D25E18C429B78047008BCE84 /* PickAssetScreen.swift in Sources */,
 				D25E18C629B78371008BCE84 /* IntroductoryScreen.swift in Sources */,
 				D25E189329B7745C008BCE84 /* TraderApp.swift in Sources */,
+				D29A5B0229C0DCE800B45946 /* TradingOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +615,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -625,7 +653,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;

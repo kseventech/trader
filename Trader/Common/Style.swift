@@ -12,6 +12,7 @@ import SwiftUI
 enum Style {
     enum Colors {
         static let green = Color.init(red: 53/255, green: 175/255, blue: 158/255)
+        static let red = Color.init(red: 211/255, green: 71/255, blue: 93/255)
         static let purple = Color.init(red: 101/255, green: 89/255, blue: 244/255)
         static let darkGray = Color(uiColor: UIColor.systemGray)
         static let lightGray = Color(uiColor: UIColor.secondarySystemBackground)
